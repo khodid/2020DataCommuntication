@@ -3,16 +3,52 @@
 마감 기한: 2020년 6월 11일 23:59 
 작성 언어: C
 
-[TOC]
+- [데이터통신 HW#4  \<CRC-x Programming\>](#------hw-4----crc-x-programming--)
+  * [작성자 정보](#------)
+  * [수행 목적](#-----)
+  * [코드 설명](#-----)
+    + [자료형](#---)
+    + [Main 함수](#main---)
+      - [변수 초기화](#------)
+      - [데이터 입력 받기](#---------)
+      - [나머지 연산으로 데이터 전송열 생성하기](#---------------------)
+      - [노이즈 생성하기](#--------)
+      - [CRC 기능 검증하기](#crc--------)
+    + [사용자 정의 함수](#---------)
+      - [void initBD(BD\*, int length)](#void-initbd-bd----int-length-)
+      - [void getBinaryfromHex(BD\*)](#void-getbinaryfromhex-bd---)
+      - [void printBinary(BD\*)](#void-printbinary-bd---)
+      - [void getRemainder(BD\* Message,int CRC_type)](#void-getremainder-bd---message-int-crc-type-)
+      - [int  makeNoiseOnData(BD\*)](#int--makenoiseondata-bd---)
+      - [int  checkError(BD\* Message, int CRC_type)](#int--checkerror-bd---message--int-crc-type-)
+      - [void createRandomData(int size, BD\* )](#void-createrandomdata-int-size--bd----)
+  * [기본형 결과](#------)
+    + [에러 입력 1 (몇 비트 에러를 줄지 정한 후 flip 시킬 자리 입력하는 방식)](#------1-------------------flip---------------)
+    + [에러 입력 2 (burst error)](#------2--burst-error-)
+    + [에러가 0일 때](#----0---)
+  * [확장형 결과](#------)
+    + [확장형 기능 소개](#---------)
+    + [CRC-8](#crc-8)
+    + [CRC-16](#crc-16)
+    + [CRC-32](#crc-32)
+  * [추가확장 결과](#-------)
+    + [Main](#main)
+    + [실험 조건](#-----)
+    + [실험 결과](#-----)
+      - [CRC-8](#crc-8-1)
+      - [CRC-16](#crc-16-1)
+      - [CRC -32](#crc--32)
+    + [추가 실험 - Data의 Size가 얼마나 커야 CRC의 정확성이 떨어질까?](#--------data--size---------crc------------)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## 작성자 정보
 
 - 과목명: 데이터통신(002분반)
 - 학과: 전자정보통신공학과
-- 학번: 18010697
+- 학번:
 - 이름: 김해리
-
-
 
 ## 수행 목적
 
